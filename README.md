@@ -115,7 +115,20 @@ ng serve
 
 Now you can go to `http://localhost:4200` and test the app.
 
+## Docker
+You can easily run the project using the provided Dockerfile.
 
+Run:
+
+```bash
+# /path/to/enigma
+docker build -t enigma .
+docker run -it -v /path/to/enigma:/home/user/enigma -p 4200:4200 -p 5000:5000 enigma /bin/bash
+user@dockerid:~$ cd enigma/backend python3 -m flask run -h 0.0.0.0
+user@dockerid:~$ cd ../frontend && npm install && ng serve --host 0.0.0.0
+```
+
+Now you can go to `http://localhost:4200` and test the app.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
